@@ -1,0 +1,27 @@
+group 'com.example'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'application'
+
+mainClassName = "com.example.Main"
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'org.jsoup:jsoup:1.11.3'
+    compile 'com.codeborne:phantomjsdriver:1.2.1'
+
+    compile 'org.slf4j:slf4j-api:1.7.25'
+    compile 'ch.qos.logback:logback-classic:1.2.3'
+
+}
+
+wrapper {
+    distributionType = Wrapper.DistributionType.ALL
+    gradleVersion = 4.10
+}
